@@ -3,47 +3,48 @@
 <head>
 	<meta charset="utf-8" />
     <title>Audi Carousel</title>
-	 <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="carousel.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+   <link rel="stylesheet" href="jquery.mobile-1.0b1.css" type="text/css" title="no title" charset="utf-8">
+
+	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
    <script src="carousel.js" type="text/javascript" charset="utf-8"></script>
-   <link rel="stylesheet" href="carousel.css" type="text/css" media="screen" title="no title" charset="utf-8"> 
+
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script>
 </head>
 <body>   
-	<div id="slider">
-		<div class="item current">
-			<img src="image1.jpg"></img>
-			<p>FIRST IMAGE FTW</p>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Page Title</h1>
 		</div>
-		<div class="item">
-			<video width="400" height="300" controls>
-				<source src="oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-			</video>
-			<p>LOREM IPSUM</p>
+		<div data-role="content">
+				<div id="slider">
+					<div class="item current">
+						<img src="carousel1.jpg"></img>
+						<div class="caption"><strong>The new 2012 A6</strong><br/>Making the road a more intelligent place.</div>
+					</div>
+					<div class="item">
+						<a href="oceans-clip.mp4" rel="external"><img src="carouselvideo.jpg"></img></a>
+						<div class="caption"><strong>The new 2012 A6</strong><br/>Watch our video</div>
+					</div>
+					<div class="item">
+						<ul>
+							<li>look ma a list</li>
+							<li>whoohoo</li>
+						</ul>
+						<div class="caption">Envy my list</div>
+				  </div>				
+				</div>
+			
 		</div>
-		<div class="item">
-			<img src="image2.jpg"></img>
-			<p>SECOND IMAGE</p>
-		</div>
-		<div class="item">
-			<h1>Header</h1>
-			<ul>
-				<li>HEY</li>
-				<li>WHAT</li>	
-				<li>SUP</li>
-			</ul>
-		</div>
-		<div class="item current">
-			<img src="image1.jpg"></img>
-			<p>THIRD IMAGE FTW</p>
-		</div>
-		<div class="item">
-			<img src="image2.jpg"></img>
-			<p>FOURTH IMAGE</p>
-		</div>	
 	</div>
+	<div data-role="footer">
+		Footer
+		</div>
 	
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$("#slider").vCarousel();
+				$("#slider, #slider2").vCarousel();
 			});
 		</script>
 			

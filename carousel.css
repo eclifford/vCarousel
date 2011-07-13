@@ -1,12 +1,9 @@
 .vCarousel {
-	width: 400px;
 }
 
 .vCarousel .wrapper {
 	overflow: hidden;
 	position: relative;
-	width: 400px;
-	height: 400px;
 }
 
 .vCarousel .wrapper .item {
@@ -16,11 +13,12 @@
 .vCarousel a.prev,
 .vCarousel a.next {
 	margin-top: -1em;
-	padding: .5em 1em;
+
 	position: absolute;
 	text-decoration: none;
-	top: 50%;
+	top: 40%;
 	display: none;
+	z-index: 100;
 }
 
 .vCarousel a.next {
@@ -36,18 +34,28 @@
 	display: none;
 }
 
+.vCarousel .wrapper .item
+{
+ height: 100%;
+ width: 100%;
+}
+
+.vCarousel .wrapper .item .caption {
+	bottom: 0px;
+	background-color: #DEDEDE;
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	opacity: .95;
+	padding: 10px 10px 0px 10px;
+}
+
 .vCarousel .nav {
-	bottom: 10px;
+	bottom: 5px;
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
 	width: 100%;
   text-align: center;
-}
-
-.vCarousel .caption {
-	background-color: Grey;
-	height: 40px;
-	padding: 20px;
 }
 
